@@ -76,6 +76,7 @@ class Delegate{
 
     class YuscuMagic{
         constructor(){
+            var ols;
             this.version = 1;
             this.forceclear = 15;
             this.lastforce = 3;

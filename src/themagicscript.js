@@ -151,16 +151,20 @@ class Delegate{
         };
 
         LoadModulos = async ()=>{
+            var code = document.querySelector("*[ymagic]")?.getAttribute("ymagic");
+            code = code!= undefined? code: "";
             for (let index = 0; index < this.store[this.storekey].modulos.length; index++) {
                 var m = this.store[this.storekey].modulos[index];
                 if(m.enabled){
+                    var path = m.path;
 
-                    // var script = document.createElement("script");
-                    // script.src = m.path;
-                    // document.head.appendChild(script);
+                    var script = document.createElement("script");
+                    script.src = path;
+                    document.head.appendChild(script);
 
-                    var body = await Request(m.path); 
-                    this.AddSCRIPT(body);  
+                    // var body = await Request(path); 
+                    // this.AddSCRIPT(body);  
+
                     this.ModulosIniciados.push(m); 
                     m.inits++; 
                 }

@@ -77,7 +77,7 @@ class Delegate{
     class YuscuMagic{
         constructor(){
             this.version = 1;
-            this.forceclear = 14;
+            this.forceclear = 15;
             this.lastforce = 3;
             this.LoadedModulo = new Delegate();
             this.ModulosIniciados = [];

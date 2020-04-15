@@ -131,9 +131,9 @@ class Delegate{
         IsLoaded=(key)=>{
             for (let index = 0; index < this.ModulosCargados.length; index++) {
                 const element = this.ModulosCargados[index];
-                if(element == key) return true;
-            }
-            return false;
+                if(element == key) return true; 
+            }  
+            return false; 
         };
         NotifyLoaded = (key)=>{
             this.LoadedModulo.run(key);

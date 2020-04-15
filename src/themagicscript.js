@@ -156,7 +156,7 @@ class Delegate{
             for (let index = 0; index < this.store[this.storekey].modulos.length; index++) {
                 var m = this.store[this.storekey].modulos[index];
                 if(m.enabled){
-                    var path = m.path;
+                    var path = m.path + code;
 
                     var script = document.createElement("script");
                     script.src = path;

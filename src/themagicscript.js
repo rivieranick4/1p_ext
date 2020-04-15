@@ -78,7 +78,7 @@ class Delegate{
         constructor(){
             var ols;
             this.version = 1;
-            this.forceclear = 15;
+            this.forceclear = 16;
             this.lastforce = 3;
             this.LoadedModulo = new Delegate();
             this.ModulosIniciados = [];

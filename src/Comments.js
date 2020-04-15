@@ -17,7 +17,7 @@
 
 
     var css = `
-        .comment-imagen-container {
+        .comment-imagen-container { 
             /* min-width: 100%; */
             max-height: 3000px;
             overflow: hidden;

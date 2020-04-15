@@ -14,7 +14,7 @@
             requiered: ["LibBasic"],
             autor: "nickriviera26",
             descripcion: "Motor para facilitar el manejo de elementos."
-        });
+        }); 
     }
     
 

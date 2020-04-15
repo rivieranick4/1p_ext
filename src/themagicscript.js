@@ -128,7 +128,7 @@ class Delegate{
         ForceScript=()=>{
         };
 
-        IsLoaded=(key)=>{
+        IsLoaded=(key)=>{ 
             for (let index = 0; index < this.ModulosCargados.length; index++) {
                 const element = this.ModulosCargados[index];
                 if(element == key) return true; 

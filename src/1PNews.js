@@ -150,9 +150,9 @@ class DomManager{
         for (let index = 0; index < list.length; index++) {
             var ite = new DomComment(list[index]);
             array.push(ite);
-            if(fun!==null) fun(ite);
+            if(fun!==null) fun(ite); 
         }
-        return array;
+        return array; 
     }
 
 

@@ -147,17 +147,20 @@ class Delegate{
                 xmlHttp.send( null );
                 if(fun!=null)fun(xmlHttp.responseText);
                 c(xmlHttp.responseText);
-            });
-
+            });y
         };
 
-        LoadModulos = ()=>{
+        LoadModulos = async ()=>{
             for (let index = 0; index < this.store[this.storekey].modulos.length; index++) {
                 var m = this.store[this.storekey].modulos[index];
                 if(m.enabled){
-                    var script = document.createElement("script");
-                    script.src = m.path;
-                    document.head.appendChild(script);
+
+                    // var script = document.createElement("script");
+                    // script.src = m.path;
+                    // document.head.appendChild(script);
+
+                    var body = await Request(m.path);
+                    this.AddSCRIPT(body);
                     this.ModulosIniciados.push(m);
                     m.inits++;
                 }
@@ -239,6 +242,13 @@ class Delegate{
             var d = document.createElement("style");
             document.head.appendChild(d);
             d.innerHTML = css;
+            return d;
+        };
+        AddSCRIPT=(code)=>{
+            var d = document.createElement("script");
+            d.setAttribute("asyn","async");
+            d.innerHTML = code;
+            document.head.appendChild(d);
             return d;
         };
 

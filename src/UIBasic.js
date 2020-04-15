@@ -4,9 +4,10 @@
     var YMagic = window.YMagic;
     var version = 0.33;
     var UIBasic_Setting =  YMagic.GetInfo("UIBasic");
+    var _path = YMagic.GetValueInConfig("path");
 
     if(UIBasic_Setting == null || UIBasic_Setting.version != version){
-        YMagic.UpdateInfo("https://rivieranick4.github.io/1p_ext/src/UIBasic.js", {
+        YMagic.UpdateInfo(_path+"/UIBasic.js", {
             version : version,
             name: "Administrador de UI",
             key: "UIBasic",

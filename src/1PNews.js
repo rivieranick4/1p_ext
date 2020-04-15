@@ -162,9 +162,10 @@ class DomManager{
     var YMagic = window.YMagic;
     var version = 0.14;
     var _1PNews_Setting_Setting =  YMagic.GetInfo("1PNews");
+    var _path = YMagic.GetValueInConfig("path");
 
     if(_1PNews_Setting_Setting == null || _1PNews_Setting_Setting.version != version){
-        YMagic.UpdateInfo("https://rivieranick4.github.io/1p_ext/src/1PNews.js", {
+        YMagic.UpdateInfo(_path+"/1PNews.js", {
             version : version,
             name: "1Peluchinga News",
             key: "_1PNews",

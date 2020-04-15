@@ -3,9 +3,10 @@
     var YMagic = window.YMagic;
     var version = 0.15;
     var CommentBasic_Setting =  YMagic.GetInfo("_Comments");
+    var _path = YMagic.GetValueInConfig("path");
 
     if(CommentBasic_Setting == null || CommentBasic_Setting.version != version){
-        YMagic.UpdateInfo("https://rivieranick4.github.io/1p_ext/src/Comments.js", {
+        YMagic.UpdateInfo(_path+"/Comments.js", {
             version : version,
             name: "Comentarios",
             key: "_Comments",

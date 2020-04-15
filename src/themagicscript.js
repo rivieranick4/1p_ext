@@ -110,14 +110,17 @@ class Delegate{
                 this.store[this.storekey].modulos = [];
                 this.store[this.storekey].save();
 
-                this.AddModulo("https://rivieranick4.github.io/1p_ext/src/UIBasic.js"); 
-                this.UpdateInfo("https://rivieranick4.github.io/1p_ext/src/UIBasic.js",{enabled: true}); 
+                // var code = document.querySelector("*[ymagic]")?.getAttribute("ymagic");
+                // code = code!= undefined? code: "https://rivieranick4.github.io/1p_ext/src";
+                var code = this.GetValueInConfig("path");
+                this.AddModulo(code+"/UIBasic.js"); 
+                this.UpdateInfo(code+"/UIBasic.js",{enabled: true}); 
                 
-                this.AddModulo("https://rivieranick4.github.io/1p_ext/src/1PNews.js"); 
-                this.UpdateInfo("https://rivieranick4.github.io/1p_ext/src/1PNews.js",{enabled: true}); 
+                this.AddModulo(code+"/1PNews.js"); 
+                this.UpdateInfo(code+"/1PNews.js",{enabled: true}); 
 
-                this.AddModulo("https://rivieranick4.github.io/1p_ext/src/Comments.js"); 
-                this.UpdateInfo("https://rivieranick4.github.io/1p_ext/src/Comments.js",{enabled: true}); 
+                this.AddModulo(code+"/Comments.js"); 
+                this.UpdateInfo(code+"/Comments.js",{enabled: true}); 
             }
 
             if(this.store["YuscuMagic"].lastforce != this.lastforce){
@@ -141,6 +144,10 @@ class Delegate{
             this.ModulosCargados.push(key);
         };
         
+        GetValueInConfig=(attr)=>{
+            return document.querySelector("*[ymagic]")?.getAttribute(attr);
+        }
+
         Request = (url,fun=null)=>{
             return new Promise((c,e)=>{
                 var xmlHttp = new XMLHttpRequest();
@@ -159,12 +166,12 @@ class Delegate{
                 if(m.enabled){
                     var path = m.path + code;
 
-                    var script = document.createElement("script");
-                    script.src = path;
-                    document.head.appendChild(script);
+                    // var script = document.createElement("script");
+                    // script.src = path;
+                    // document.head.appendChild(script);
 
-                    // var body = await Request(path); 
-                    // this.AddSCRIPT(body);  
+                    var body = await Request(path); 
+                    this.AddSCRIPT(body);  
 
                     this.ModulosIniciados.push(m); 
                     m.inits++; 

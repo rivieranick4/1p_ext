@@ -6,7 +6,7 @@
     var UIBasic_Setting =  YMagic.GetInfo("UIBasic");
 
     if(UIBasic_Setting == null || UIBasic_Setting.version != version){
-        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/UIBasic.js", {
+        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/UIBasic.js", {
             version : version,
             name: "Administrador de UI",
             key: "UIBasic",

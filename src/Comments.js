@@ -5,7 +5,7 @@
     var CommentBasic_Setting =  YMagic.GetInfo("_Comments");
 
     if(CommentBasic_Setting == null || CommentBasic_Setting.version != version){
-        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/Comments.js", {
+        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/Comments.js", {
             version : version,
             name: "Comentarios",
             key: "_Comments",

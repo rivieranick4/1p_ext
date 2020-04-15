@@ -7,7 +7,7 @@
     var DomBasic_Setting =  YMagic.GetInfo("DomBasic");
 
     if(DomBasic_Setting == null || DomBasic_Setting.version != version){
-        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/DomBasic.js", {
+        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/DomBasic.js", {
             version : version,
             name: "DomBasic",
             key: "DomBasic",

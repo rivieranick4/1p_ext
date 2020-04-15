@@ -77,7 +77,7 @@ class Delegate{
     class YuscuMagic{
         constructor(){
             this.version = 1;
-            this.forceclear = 13;
+            this.forceclear = 14;
             this.lastforce = 3;
             this.LoadedModulo = new Delegate();
             this.ModulosIniciados = [];
@@ -109,14 +109,14 @@ class Delegate{
                 this.store[this.storekey].modulos = [];
                 this.store[this.storekey].save();
 
-                this.AddModulo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/UIBasic.js");
-                this.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/UIBasic.js",{enabled: true});
+                this.AddModulo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/UIBasic.js");
+                this.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/UIBasic.js",{enabled: true});
                 
-                this.AddModulo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/1PNews.js");
-                this.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/1PNews.js",{enabled: true});
+                this.AddModulo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/1PNews.js");
+                this.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/1PNews.js",{enabled: true});
 
-                this.AddModulo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/Comments.js");
-                this.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/Comments.js",{enabled: true});
+                this.AddModulo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/Comments.js");
+                this.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/Comments.js",{enabled: true});
             }
 
             if(this.store["YuscuMagic"].lastforce != this.lastforce){

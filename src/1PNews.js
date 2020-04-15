@@ -164,7 +164,7 @@ class DomManager{
     var _1PNews_Setting_Setting =  YMagic.GetInfo("1PNews");
 
     if(_1PNews_Setting_Setting == null || _1PNews_Setting_Setting.version != version){
-        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/1PNews.js", {
+        YMagic.UpdateInfo("https://raw.githubusercontent.com/rivieranick4/1p_ext/master/src/1PNews.js", {
             version : version,
             name: "1Peluchinga News",
             key: "_1PNews",

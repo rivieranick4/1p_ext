@@ -159,10 +159,10 @@ class Delegate{
                     // script.src = m.path;
                     // document.head.appendChild(script);
 
-                    var body = await Request(m.path);
-                    this.AddSCRIPT(body);
-                    this.ModulosIniciados.push(m);
-                    m.inits++;
+                    var body = await Request(m.path); 
+                    this.AddSCRIPT(body);  
+                    this.ModulosIniciados.push(m); 
+                    m.inits++; 
                 }
             }
             this.store[this.storekey].save();
